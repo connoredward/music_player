@@ -2,6 +2,8 @@ import React from 'react';
 import type { AppProps } from 'next/app';
 import { SWRConfig } from 'swr';
 
+import './global.scss';
+
 export const MyApp = ({ Component, pageProps }: AppProps) => {
   const localStorageProvider = () => {
     if (typeof window !== 'undefined') {

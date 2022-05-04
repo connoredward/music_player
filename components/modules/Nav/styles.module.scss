@@ -1,0 +1,92 @@
+.nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  min-width: 100vw;
+  height: 50px;
+  background: rgba(46, 46, 46, 1);
+  border-bottom: 1px solid rgb(33, 33, 33);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  z-index: 9;
+
+  @media only screen and (max-width: 650px) {
+    justify-content: flex-end;
+  }
+
+  .mobile {
+    display: none;
+    font-size: 22px;
+    margin: 0 20px;
+    padding: 0 10px;
+    font-weight: 350;
+    cursor: pointer;
+    font-family: "Yeseva-One";
+    position: absolute;
+    left: 0;
+
+    >span {
+      color: rgb(218, 242, 35);
+      font-size: 30px;
+    }
+  }
+
+  a {
+    color: white;
+  }
+
+  h1 {
+    transform: translateY(-50%);
+    top: 50%;
+    font-size: 22px;
+    margin: 0 20px;
+    padding: 0 10px;
+    font-weight: 350;
+    cursor: pointer;
+    font-family: "Yeseva-One";
+    position: absolute;
+    left: 0;
+
+    >span {
+      color: rgb(218, 242, 35);
+      font-size: 30px;
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    h1 {
+      display: none;
+    }
+
+    .mobile {
+      display: block;
+    }
+  }
+
+  form {
+    height: 100%;
+  }
+
+  input {
+    padding: 0 20px;
+    border: none;
+    font-size: 18px;
+    color: rgba(#fff, .7);
+    height: auto;
+    background: transparent;
+    border-radius: 0;
+    font-family: "Roboto";
+    font-weight: lighter;
+    height: 100%;
+    text-align: center;
+
+    &:focus &:focus-visible,
+    &:hover {
+      border: none;
+      box-shadow: none;
+      outline: none;
+    }
+  }
+}
