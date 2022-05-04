@@ -11,12 +11,12 @@ import './global.scss';
 export const MyApp = ({ Component, pageProps }: AppProps) => {
   const localStorageProvider = () => {
     if (typeof window !== 'undefined') {
-      const map = new Map(JSON.parse(localStorage.getItem('app-cache') || '[]'))
+      const map = new Map(JSON.parse(localStorage.getItem('app-cache') || '[]'));
       window.addEventListener('beforeunload', () => {
-        const appCache = JSON.stringify(Array.from(map.entries()))
-        localStorage.setItem('app-cache', appCache)
-      })
-      return map
+        const appCache = JSON.stringify(Array.from(map.entries()));
+        localStorage.setItem('app-cache', appCache);
+      });
+      return map;
     }
     return new Map();
   };
@@ -24,7 +24,7 @@ export const MyApp = ({ Component, pageProps }: AppProps) => {
     <SWRConfig
       value={{
         provider: localStorageProvider,
-        fetcher: (resource, init) => fetch(resource, init).then(res => res.json()),
+        fetcher: (resource, init) => fetch(resource, init).then((res) => res.json()),
       }}
     >
       <QueueStore>

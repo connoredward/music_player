@@ -14,7 +14,7 @@ export const Store: FC<Props> = ({ children }): any => {
   const { data, mutate } = useSWR('/api/db/get');
 
   const getId = async (args) => {
-    const song = data?.find(({ searchedValue, videoId }) => searchedValue === args && videoId)
+    const song = data?.find(({ searchedValue, videoId }) => searchedValue === args && videoId);
     if (song) return song?.videoId;
 
     const videoId = await youtubeSearch(args);
@@ -32,7 +32,7 @@ export const Store: FC<Props> = ({ children }): any => {
   return (
     <Context.Provider
       value={{
-        getId
+        getId,
       }}
     >
       {children}

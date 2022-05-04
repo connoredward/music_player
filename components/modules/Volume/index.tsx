@@ -32,7 +32,6 @@ const VolumeController: FC = () => {
 
   return (
     <div className={styles['volume']}>
-
       <div className={styles['volume__tool_tip']}>
         <Range
           onChange={changeVolume}
@@ -71,21 +70,17 @@ const VolumeController: FC = () => {
         />
       </div>
 
-      {isMuted
-        ? <button type="button" onClick={unMuteSong}><MdVolumeOff /></button>
-        : (
-          <button type="button" onClick={muteSong}>
-            {volume[0] > 70
-              ? <MdVolumeUp />
-              : volume[0] > 40
-                ? <MdVolumeDown />
-                : <MdVolumeMute />
-            }
-          </button>
-        )
-      }
+      {isMuted ? (
+        <button type="button" onClick={unMuteSong}>
+          <MdVolumeOff />
+        </button>
+      ) : (
+        <button type="button" onClick={muteSong}>
+          {volume[0] > 70 ? <MdVolumeUp /> : volume[0] > 40 ? <MdVolumeDown /> : <MdVolumeMute />}
+        </button>
+      )}
     </div>
   );
 };
 
-export default VolumeController
+export default VolumeController;

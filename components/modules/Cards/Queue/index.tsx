@@ -46,14 +46,23 @@ const QueueCard: FC<Props> = (props) => {
 
   return (
     <button
-      className={classNames(styles['card'], styles[name === currentSong?.name ? 'card--active' : ''])}
+      className={classNames(
+        styles['card'],
+        styles[name === currentSong?.name ? 'card--active' : '']
+      )}
       disabled={disabled}
       onClick={searchSong}
       type="button"
     >
       <Link href={{ pathname: '/', query: { album: album?.id } }} prefetch={false} passHref>
         <a href="null" onClick={(e) => e.stopPropagation()}>
-          <Image src={album?.images?.[1]?.url} alt={album?.name} width={70} height={70} objectFit="cover" />
+          <Image
+            src={album?.images?.[1]?.url}
+            alt={album?.name}
+            width={70}
+            height={70}
+            objectFit="cover"
+          />
         </a>
       </Link>
 

@@ -13,22 +13,17 @@ export const Store = ({ children }): any => {
     localStorage.setItem('queue', JSON.stringify(queue));
   }, [queue]);
 
-  const addQueue = (props) =>
-    (e) => {
-      e.stopPropagation();
-      if (queue?.find(({ id }) => id === props?.id)) return;
-      setQueue((cur) => [...cur, props]);
-    };
+  const addQueue = (props) => (e) => {
+    e.stopPropagation();
+    if (queue?.find(({ id }) => id === props?.id)) return;
+    setQueue((cur) => [...cur, props]);
+  };
 
   const deleteQueue = (props) => {
     setQueue((cur) => cur.filter(({ id }) => id !== props.id));
   };
 
-  return (
-    <Context.Provider value={{ queue, addQueue, deleteQueue }}>
-      {children}
-    </Context.Provider>
-  );
+  return <Context.Provider value={{ queue, addQueue, deleteQueue }}>{children}</Context.Provider>;
 };
 
 export default {

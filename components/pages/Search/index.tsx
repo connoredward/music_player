@@ -17,10 +17,12 @@ const SearchPage: FC = () => {
           router.push({ pathname: '/', query: { search: router?.query?.search } });
           setSearched({
             ...tracks,
-            items: tracks.items?.filter((value, index, self) =>
-              index === self.findIndex((t) => (
-                t.album.name === value.album.name
-              ))).sort((a, b) => {
+            items: tracks.items
+              ?.filter(
+                (value, index, self) =>
+                  index === self.findIndex((t) => t.album.name === value.album.name)
+              )
+              .sort((a, b) => {
                 // @ts-ignore
                 return new Date(b.album.release_date) - new Date(a.album.release_date);
               }),

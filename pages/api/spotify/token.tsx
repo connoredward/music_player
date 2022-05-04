@@ -12,12 +12,17 @@ const token = (req: NextApiRequest, res: NextApiResponse) => {
     clientSecret: process.env.CLIENT_SECRET,
   });
 
-  return spotifyApi.clientCredentialsGrant()
+  return spotifyApi
+    .clientCredentialsGrant()
     .then((data) => {
-      res.setHeader(
-        'Set-Cookie',
-        serialize('accessToken', data.body.access_token, { path: '/', maxAge: data?.body?.expires_in })
-      )
+      res
+        .setHeader(
+          'Set-Cookie',
+          serialize('accessToken', data.body.access_token, {
+            path: '/',
+            maxAge: data?.body?.expires_in,
+          })
+        )
         .status(200)
         .end();
     })

@@ -5,7 +5,7 @@ import classNames from 'classnames';
 
 import styles from './styles.module.scss';
 
-const fetcher = url => fetch(url).then(r => r.json())
+const fetcher = (url) => fetch(url).then((r) => r.json());
 
 type Props = {
   artists: {
@@ -24,9 +24,18 @@ const Pitchfork: FC<Props> = ({ artists, name }) => {
       <p>
         {data?.text}
         &nbsp;
-        <a href={data?.url} target="_blank" rel="noreferrer">[review here]</a>
+        <a href={data?.url} target="_blank" rel="noreferrer">
+          [review here]
+        </a>
       </p>
-      <span className={classNames(styles['review__rating'], styles[data?.best ? 'review__rating--best' : ''])}>{data?.rating}</span>
+      <span
+        className={classNames(
+          styles['review__rating'],
+          styles[data?.best ? 'review__rating--best' : '']
+        )}
+      >
+        {data?.rating}
+      </span>
     </div>
   );
 };

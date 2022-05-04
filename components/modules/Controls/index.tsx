@@ -51,10 +51,11 @@ const Controls: FC = () => {
       <div className={styles['controller_buttons']}>
         <MdSkipPrevious onClick={prevSong} />
 
-        {isPaused
-          ? <MdPlayCircleOutline onClick={playSong} />
-          : <MdPauseCircleOutline onClick={pauseSong} />
-        }
+        {isPaused ? (
+          <MdPlayCircleOutline onClick={playSong} />
+        ) : (
+          <MdPauseCircleOutline onClick={pauseSong} />
+        )}
 
         <MdSkipNext onClick={nextSong} />
       </div>
@@ -69,7 +70,6 @@ const Bar: FC = () => {
   return (
     <div className={classNames(styles['bar'], styles[currentSong ? 'bar--active' : ''])}>
       <div className={styles['bar__content']}>
-
         <CurrentPlaying />
 
         <Controls />
@@ -79,9 +79,8 @@ const Bar: FC = () => {
           <AddQueue />
         </div>
       </div>
-
     </div>
   );
-}
+};
 
 export default Bar;

@@ -30,4 +30,3 @@ const AddQueue: FC = () => {
 };
 
 export default AddQueue;
-

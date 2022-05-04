@@ -36,14 +36,16 @@ const Card: FC<Props> = (props) => {
 
   return (
     <button
-      className={classNames(styles['card'], styles[name === currentSong?.name ? 'card--active' : ''])}
+      className={classNames(
+        styles['card'],
+        styles[name === currentSong?.name ? 'card--active' : '']
+      )}
       disabled={disabled}
       onClick={searchSong}
       type="button"
     >
       <span className={styles['card__song']}>{name}</span> &nbsp;- &nbsp;
       <Artists {...props} className={styles['card__artists']} />
-
       <button type="button" onClick={addQueue(props)} className={styles['queue']}>
         <MdQueue />
       </button>

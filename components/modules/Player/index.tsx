@@ -25,6 +25,5 @@ const Player: FC = () => {
       onEnd={nextSong}
     />
   );
-}
+};
 export default Player;
-

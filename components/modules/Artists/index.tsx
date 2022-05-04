@@ -24,11 +24,10 @@ const ArtistMap: FC<Props> = ({ artists, className }) => (
         {arr?.length === 1
           ? ''
           : index === 0 && arr.length > 0
-            ? ' ft. '
-            : index + 1 === arr.length
-              ? ''
-              : ', '
-        }
+          ? ' ft. '
+          : index + 1 === arr.length
+          ? ''
+          : ', '}
       </span>
     ))}
   </p>

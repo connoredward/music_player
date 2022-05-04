@@ -20,12 +20,18 @@ type Props = {
 const Card: FC<Props> = ({ album, artists }) => {
   const router = useRouter();
   return (
-    <div className={styles['card']} onClick={() => router.push(`/?album=${album?.id}`, null, { shallow: true })}>
+    <div
+      className={styles['card']}
+      onClick={() => router.push(`/?album=${album?.id}`, null, { shallow: true })}
+    >
       <div className={styles['content']}>
         <span className={styles['content__album']}>{album.name}</span>
         <span className={styles['content__artist']}>{artists[0].name}</span>
       </div>
-      <div className={styles['album_cvr']} style={{ backgroundImage: `url(${album?.images[2]?.url})` }} />
+      <div
+        className={styles['album_cvr']}
+        style={{ backgroundImage: `url(${album?.images[2]?.url})` }}
+      />
     </div>
   );
 };

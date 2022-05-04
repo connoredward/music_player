@@ -8,7 +8,8 @@ const getAlbum = (req: NextApiRequest, res: NextApiResponse) => {
 
   const spotifyApi = new SpotifyWebApi({ accessToken: cookie?.accessToken });
 
-  return spotifyApi.getAlbum(id)
+  return spotifyApi
+    .getAlbum(id)
     .then((data) => res.json(data.body))
     .catch((err) => {
       throw err;

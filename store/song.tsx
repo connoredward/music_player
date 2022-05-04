@@ -36,7 +36,8 @@ export const Store = ({ children }): any => {
   };
 
   const prevSong = async () => {
-    const prevIndex = currentAlbum?.tracks?.items?.findIndex(({ id }) => id === currentSong?.id) - 1;
+    const prevIndex =
+      currentAlbum?.tracks?.items?.findIndex(({ id }) => id === currentSong?.id) - 1;
 
     // If the index of prev so is less than 0 then nothing before or current song hasn't played more than 5 seconds then restart song.
     if (prevIndex < 0 || event.getCurrentTime() > 5) {
@@ -48,13 +49,18 @@ export const Store = ({ children }): any => {
         ...prevSong,
         img: currentAlbum?.images?.[2]?.url ?? prevSong?.img,
         albumId: currentAlbum?.id ?? prevSong?.albumId,
-        videoId: await getId(`${currentAlbum?.artists?.[0]?.name ?? prevSong?.artists?.[0]?.name} - ${prevSong?.name} song`),
-      })
+        videoId: await getId(
+          `${currentAlbum?.artists?.[0]?.name ?? prevSong?.artists?.[0]?.name} - ${
+            prevSong?.name
+          } song`
+        ),
+      });
     }
   };
 
   const nextSong = async () => {
-    const nextIndex = currentAlbum?.tracks?.items?.findIndex(({ id }) => id === currentSong?.id) + 1;
+    const nextIndex =
+      currentAlbum?.tracks?.items?.findIndex(({ id }) => id === currentSong?.id) + 1;
 
     // If the index of next so is greater than album then no next song in album
     // remove event, current song & album from state
@@ -69,8 +75,12 @@ export const Store = ({ children }): any => {
         ...nextSong,
         img: currentAlbum?.images?.[2]?.url ?? nextSong?.img,
         albumId: currentAlbum?.id ?? nextSong?.albumId,
-        videoId: await getId(`${currentAlbum?.artists?.[0]?.name ?? nextSong?.artists?.[0]?.name} - ${nextSong?.name} song`),
-      })
+        videoId: await getId(
+          `${currentAlbum?.artists?.[0]?.name ?? nextSong?.artists?.[0]?.name} - ${
+            nextSong?.name
+          } song`
+        ),
+      });
     }
   };
 
@@ -102,7 +112,7 @@ export const Store = ({ children }): any => {
       {children}
     </Context.Provider>
   );
-}
+};
 
 export default {
   Store,

@@ -8,7 +8,8 @@ const search = (req: NextApiRequest, res: NextApiResponse) => {
 
   const spotifyApi = new SpotifyWebApi({ accessToken: cookie?.accessToken });
 
-  spotifyApi.searchTracks(`artist:${artist}`)
+  spotifyApi
+    .searchTracks(`artist:${artist}`)
     .then((data) => res.json(data.body))
     .catch((err) => {
       throw err;

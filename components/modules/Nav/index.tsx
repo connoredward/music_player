@@ -37,7 +37,7 @@ const Form: FC = () => {
         router.push({ pathname: '/', query: { search: music?.search } });
       }, 500);
     }
-  }, [music?.search])
+  }, [music?.search]);
 
   return (
     <form onSubmit={handleSubmit}>
@@ -55,8 +55,12 @@ const NavBar: FC = () => (
   <div className={styles['nav']}>
     <Link href={{ pathname: '/', query: {} }} prefetch={false} passHref>
       <a href="null">
-        <h1>msuci_pl<span>.</span></h1>
-        <h1 className={styles['mobile']}>M<span>.</span></h1>
+        <h1>
+          msuci_pl<span>.</span>
+        </h1>
+        <h1 className={styles['mobile']}>
+          M<span>.</span>
+        </h1>
       </a>
     </Link>
     <Form />

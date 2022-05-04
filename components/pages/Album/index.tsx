@@ -3,7 +3,7 @@ import type { FC } from 'react';
 import { useRouter } from 'next/router';
 import dynamic from 'next/dynamic';
 
-import Review from 'components/modules/Review'
+import Review from 'components/modules/Review';
 
 import styles from './styles.module.scss';
 
@@ -31,18 +31,25 @@ const AlbumPage: FC = () => {
     <div>
       <div className={styles['header']}>
         <div className={styles['header__content']}>
-          <span className={styles['header__artist']}>{album?.artists?.map(({ id, name }) => (name))}</span>
+          <span className={styles['header__artist']}>
+            {album?.artists?.map(({ id, name }) => name)}
+          </span>
           <span className={styles['header__album']}>{album?.name}</span>
 
           <Review {...album} />
-
         </div>
         <img src={album?.images[1]?.url} />
       </div>
 
       <div>
         {album?.tracks?.items?.map((item) => (
-          <Card {...item} img={album?.images[2]?.url} albumId={album?.id} key={item?.id} album={album} />
+          <Card
+            {...item}
+            img={album?.images[2]?.url}
+            albumId={album?.id}
+            key={item?.id}
+            album={album}
+          />
         ))}
       </div>
     </div>

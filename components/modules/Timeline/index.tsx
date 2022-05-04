@@ -70,15 +70,13 @@ const SongRange: FC = () => {
             }}
           >
             <div className={styles['times']}>
-              <span>{songTime(block || currentTime)}</span>/
-              <span>{songTime(duration)}</span>
+              <span>{songTime(block || currentTime)}</span>/<span>{songTime(duration)}</span>
             </div>
           </div>
         )}
       />
-
     </div>
   );
-}
+};
 
 export default SongRange;

@@ -19,13 +19,17 @@ const QueuePage: FC = () => {
   return (
     <div className={styles['queue']}>
       <span className={styles['queue__header']}>My Queue</span>
-      {queue?.length > 0
-        ? (
-          <div>
-            {queue?.map((i) => <QueueCard key={i?.id} {...i} />)}
-          </div>
-        ) : <div><MdArchive /></div>
-      }
+      {queue?.length > 0 ? (
+        <div>
+          {queue?.map((i) => (
+            <QueueCard key={i?.id} {...i} />
+          ))}
+        </div>
+      ) : (
+        <div>
+          <MdArchive />
+        </div>
+      )}
     </div>
   );
 };
