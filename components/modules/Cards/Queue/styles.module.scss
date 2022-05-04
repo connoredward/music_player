@@ -1,0 +1,63 @@
+.card {
+  border: none;
+  background: none;
+  color: #fff;
+  font-size: 12px;
+  min-width: 200px;
+  width: 100%;
+  padding: 5px 20px 5px 5px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 300;
+  position: relative;
+
+  .card__song {
+    font-size: 16px;
+  }
+
+  .card__song,
+  .card__album {
+    display: block;
+    text-align: left;
+    margin: 5px 20px;
+
+  }
+
+  .card__album {
+    color: rgba(255, 255, 255, .6);
+    display: flex;
+
+    a {
+      text-decoration: none;
+      color: rgba(255, 255, 255, .6);
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+
+  &--active,
+  &:hover {
+    background: rgba(0, 0, 0, .5);
+  }
+
+  .remove {
+    background-color: transparent;
+    border: none;
+    height: 100%;
+    width: 50px;
+    font-size: 14px;
+    color: #fff;
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    padding: 0;
+
+    &:hover {
+      opacity: .5;
+    }
+  }
+}

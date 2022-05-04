@@ -2,6 +2,10 @@ import React from 'react';
 import type { AppProps } from 'next/app';
 import { SWRConfig } from 'swr';
 
+import { Store as SongStore } from 'store/song';
+import { Store as YoutubeStore } from 'store/youtube';
+import { Store as QueueStore } from 'store/queue';
+
 import './global.scss';
 
 export const MyApp = ({ Component, pageProps }: AppProps) => {
@@ -23,7 +27,13 @@ export const MyApp = ({ Component, pageProps }: AppProps) => {
         fetcher: (resource, init) => fetch(resource, init).then(res => res.json()),
       }}
     >
-      <Component {...pageProps} />
+      <QueueStore>
+        <YoutubeStore>
+          <SongStore>
+            <Component {...pageProps} />
+          </SongStore>
+        </YoutubeStore>
+      </QueueStore>
     </SWRConfig>
   );
 };

@@ -1,0 +1,46 @@
+.review {
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+
+  p {
+    text-align: left;
+    width: 80%;
+    font-size: 14px;
+    font-weight: lighter;
+    line-height: 21px;
+    margin: 12px 0 0;
+
+    color: rgba($color: #fff, $alpha: 0.6);
+
+    a {
+      color: rgba($color: #484be0, $alpha: 1.0)
+    }
+  }
+
+  .review__rating {
+    border: 3px solid #fff;
+    border-radius: 100%;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    min-width: 50px;
+    min-height: 50px;
+    margin: auto;
+    font-size: 24px;
+
+    &--best {
+      color: rgba($color: #dc1919, $alpha: 1.0);
+      border: 3px solid rgba($color: #dc1919, $alpha: 1.0);
+    }
+  }
+
+  @media only screen and (max-width: 550px) {
+    flex-direction: column;
+
+    p {
+      width: 100%;
+      margin: 20px 0;
+    }
+  }
+}

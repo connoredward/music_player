@@ -1,0 +1,46 @@
+.card {
+  border: none;
+  background: none;
+  color: #fff;
+  font-size: 12px;
+  min-width: 200px;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 300;
+  position: relative;
+
+  .card__song {
+    margin: 5px 0;
+  }
+
+  .card__artists {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 100%;
+  }
+
+  &--active,
+  &:hover {
+    background: rgba(0, 0, 0, .5);
+  }
+
+  .queue {
+    background-color: transparent;
+    border: none;
+    height: 100%;
+    width: 50px;
+    font-size: 14px;
+    color: #fff;
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    padding: 0;
+
+    &:hover {
+      opacity: .5;
+    }
+  }
+}

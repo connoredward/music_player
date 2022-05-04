@@ -1,0 +1,46 @@
+.range {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 50%;
+
+  &:hover {
+    .times {
+      display: block;
+    }
+  }
+}
+
+.times {
+  font-size: 11px;
+  margin: 5px 0;
+  position: absolute;
+  display: none;
+  background: rgba($color: #fff, $alpha: .2);
+  opacity: .5;
+  padding: 5px;
+  z-index: 99;
+  top: 0;
+  transform: translate(-45%, -150%);
+  width: 100px;
+  text-align: center;
+  border-radius: 5px;
+
+  &:after {
+    content: "";
+    clip-path: polygon(49% 46%, 0 0, 100% 0);
+    background: rgba($color: #fff, $alpha: .2);
+    position: absolute;
+    z-index: 999;
+    display: block;
+    width: 20px;
+    height: 10px;
+    left: 41.5%;
+    bottom: -10px;
+  }
+
+  span {
+    margin: 0 5px;
+  }
+}

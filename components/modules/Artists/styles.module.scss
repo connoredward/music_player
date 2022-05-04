@@ -1,0 +1,17 @@
+.artists {
+  color: rgba(255, 255, 255, .6);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 150px;
+  margin: 0px;
+
+  a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, .6);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
