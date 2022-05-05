@@ -79,7 +79,7 @@ const QueueCard: FC<Props> = (props) => {
         </span>
       </div>
 
-      <button type="button" onClick={() => deleteQueue(props)} className={styles['remove']}>
+      <button type="button" onClick={deleteQueue(props)} className={styles['remove']}>
         <MdClose />
       </button>
     </button>

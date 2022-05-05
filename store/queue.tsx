@@ -19,7 +19,8 @@ export const Store = ({ children }): any => {
     setQueue((cur) => [...cur, props]);
   };
 
-  const deleteQueue = (props) => {
+  const deleteQueue = (props) => (e) => {
+    e.stopPropagation();
     setQueue((cur) => cur.filter(({ id }) => id !== props.id));
   };
 

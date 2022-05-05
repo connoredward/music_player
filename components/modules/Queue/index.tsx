@@ -21,7 +21,7 @@ const AddQueue: FC = () => {
   }, [queue]);
 
   return (
-    <Link href={{ pathname: '/', query: { queue: 1 } }} prefetch={false} passHref>
+    <Link href="/?queue" prefetch={false} passHref>
       <a href="null" className={classNames(styles['cta'], styles[anim ? 'cta--anim' : ''])}>
         <MdOutlineQueueMusic />
       </a>

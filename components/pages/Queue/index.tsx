@@ -14,20 +14,17 @@ const QueuePage: FC = () => {
   const router = useRouter();
   const { queue } = useContext(QueueContext);
 
-  if (!router?.query?.queue) return null;
+  if (!Object.keys(router?.query)?.find((i) => i === 'queue')) return null;
 
   return (
     <div className={styles['queue']}>
       <span className={styles['queue__header']}>My Queue</span>
       {queue?.length > 0 ? (
-        <div>
-          {queue?.map((i) => (
-            <QueueCard key={i?.id} {...i} />
-          ))}
-        </div>
+        queue?.map((i) => <QueueCard key={i?.id} {...i} />)
       ) : (
-        <div>
+        <div className={styles['empty']}>
           <MdArchive />
+          <span>empty</span>
         </div>
       )}
     </div>
