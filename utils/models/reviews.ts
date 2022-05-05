@@ -11,7 +11,7 @@ const reviews = new Schema({
     required: true,
   },
   best: {
-    type: String,
+    type: Boolean,
     required: true,
   },
   rating: {
