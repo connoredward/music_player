@@ -24,7 +24,7 @@ const token = (req: NextApiRequest, res: NextApiResponse) => {
           })
         )
         .status(200)
-        .end();
+        .json({ message: 'AccessToken created!' });
     })
     .catch((err) => {
       throw err;

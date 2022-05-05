@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import type { FC } from 'react';
 import { useRouter } from 'next/router';
 import dynamic from 'next/dynamic';
+import useSWR from 'swr';
 
 import Review from 'components/modules/Review';
 
@@ -14,8 +15,11 @@ const AlbumPage: FC = () => {
 
   const [album, setAlbum] = useState(null);
 
+  // Get accessToken and store as cookie.
+  const { data } = useSWR('/api/spotify/token');
+
   useEffect(() => {
-    if (router?.query?.album) {
+    if (router?.query?.album && data) {
       fetch(`/api/spotify/album/${router?.query?.album}`)
         .then((res) => res.json())
         .then((body) => setAlbum(body))
@@ -23,7 +27,7 @@ const AlbumPage: FC = () => {
     } else {
       setAlbum(null);
     }
-  }, [router?.query?.album]);
+  }, [router?.query?.album, data]);
 
   if (!router?.query?.album || !album) return <div />;
 
