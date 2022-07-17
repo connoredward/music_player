@@ -26,6 +26,7 @@
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-icons": "^4.3.1",
+    "react-loader-spinner": "^5.1.5",
     "react-range": "^1.8.12",
     "react-youtube": "^9.0.1",
     "sass": "^1.51.0",
@@ -39,7 +40,7 @@
     "@types/react": "^18.0.8",
     "eslint": "8.14.0",
     "eslint-config-next": "12.1.6",
-    "typescript": "^4.6.4",
-    "husky": "^7.0.0"
+    "husky": "^7.0.0",
+    "typescript": "^4.6.4"
   }
 }

@@ -1,0 +1,20 @@
+.artists {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  // text-align: center;
+  grid-gap: 30px;
+  button {
+    all: unset;
+    cursor: pointer;
+    span {
+      display: block;
+      color: #fff;
+      font-size: 24px;
+    }
+    &:hover {
+      span {
+        text-decoration: underline;
+      }
+    }
+  }
+}

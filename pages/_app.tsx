@@ -5,6 +5,7 @@ import { SWRConfig } from 'swr';
 import { Store as SongStore } from 'store/song';
 import { Store as YoutubeStore } from 'store/youtube';
 import { Store as QueueStore } from 'store/queue';
+import { Store as LoaderStore } from 'store/loader';
 
 import './global.scss';
 
@@ -27,13 +28,15 @@ export const MyApp = ({ Component, pageProps }: AppProps) => {
         fetcher: (resource, init) => fetch(resource, init).then((res) => res.json()),
       }}
     >
-      <QueueStore>
-        <YoutubeStore>
-          <SongStore>
-            <Component {...pageProps} />
-          </SongStore>
-        </YoutubeStore>
-      </QueueStore>
+      <LoaderStore>
+        <QueueStore>
+          <YoutubeStore>
+            <SongStore>
+              <Component {...pageProps} />
+            </SongStore>
+          </YoutubeStore>
+        </QueueStore>
+      </LoaderStore>
     </SWRConfig>
   );
 };
