@@ -1,0 +1,35 @@
+.favourites {
+  h4 {
+    margin: 0;
+    font-weight: 500;
+    font-size: 22px;
+  }
+}
+
+.list {
+  padding: 0 10px;
+  height: 500px;
+  overflow-y: scroll;
+  -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    &::-webkit-scrollbar {
+      display: none;
+    }
+}
+
+.song {
+  display: flex;
+  >button {
+    all: unset;
+    cursor: pointer;
+    margin: 20px 20px 0 0;
+    span {
+      overflow: visible !important;
+    }
+    .song__cover {
+      border-radius: 10px;
+      box-shadow: 0px 5px 10px 1px rgba(67,15,93, .3);
+    }
+  }
+}

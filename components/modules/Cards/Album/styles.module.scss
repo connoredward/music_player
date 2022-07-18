@@ -1,7 +1,6 @@
 .card {
   border: none;
   background: none;
-  color: #fff;
   font-size: 12px;
   min-width: 200px;
   width: 100%;
@@ -14,26 +13,30 @@
 
   .card__song {
     margin: 5px 0;
+    font-weight: 600;
+    opacity: .6;
+    font-size: 11px;
   }
 
   .card__artists {
     white-space: nowrap;
     text-overflow: ellipsis;
     max-width: 100%;
+    font-size: 11px;
   }
 
   &--active,
   &:hover {
-    background: rgba(0, 0, 0, .5);
+    .card__song {
+      opacity: 1;
+    }
   }
 
   .queue {
-    background-color: transparent;
-    border: none;
+    all: unset;
     height: 100%;
     width: 50px;
     font-size: 14px;
-    color: #fff;
     position: absolute;
     right: 10px;
     cursor: pointer;

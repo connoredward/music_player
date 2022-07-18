@@ -4,8 +4,9 @@ import useSWR from 'swr';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
 
+import SideBar from 'components/modules/SideBar';
 import Nav from 'components/modules/Nav';
-import Controls from 'components/modules/Controls';
+import HomePage from 'components/pages/Home';
 import Player from 'components/modules/Player';
 
 import styles from './styles.module.scss';
@@ -22,14 +23,18 @@ const Page: NextPage = () => {
       <Head>
         <title>msuci_pl.</title>
       </Head>
+
       <div className={styles['page']}>
-        <Nav />
-        <SearchPage />
-        <AlbumPage />
-        <QueuePage />
+        <SideBar />
+        <div className={styles['content']}>
+          <Nav />
+          <HomePage />
+          {/* <SearchPage /> */}
+          <AlbumPage />
+          <QueuePage />
+        </div>
 
         <Player />
-        <Controls />
       </div>
     </>
   );

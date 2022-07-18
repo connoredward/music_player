@@ -1,0 +1,49 @@
+.side {
+  color: #fff;
+  width: 15vw;
+  height: 100vh;
+  padding: 0 0 0 40px;
+  h1 {
+    margin: 40px 0;
+    font-size: 21px;
+    font-weight: 700;
+    font-style: italic;
+  }
+  button {
+    all: unset;
+  }
+  >span {
+    font-size: 11px;
+  }
+  .side__menu {
+    list-style: none;
+    padding: 0;
+    .menu__link {
+      cursor: pointer;
+      font-weight: lighter;
+      opacity: .4;
+      padding: 10px 0;
+      margin: 10px 0;
+      font-size: 11px;
+      button {
+        display: flex;
+        align-items: center;
+      }
+      svg {
+        font-size: 20px;
+        margin: 0 30px 0 0;
+        opacity: .4;
+        path {
+          stroke: #fff;
+        }
+      }
+      &:hover, &--active {
+        opacity: 1;
+        svg {
+          opacity: 1;
+          fill: #fff;
+        }
+      }
+    }
+  }
+}

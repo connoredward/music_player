@@ -6,6 +6,6 @@ module.exports = withPlugins([[withImages]], {
     api_key: process.env.YOUTUBE_API_KEY,
   },
   images: {
-    domains: ['i.scdn.co'],
+    domains: ['i.scdn.co', 'e-cdns-images.dzcdn.net'],
   },
 });

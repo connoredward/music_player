@@ -46,9 +46,9 @@ const Card: FC<Props> = (props) => {
     >
       <span className={styles['card__song']}>{name}</span> &nbsp;- &nbsp;
       <Artists {...props} className={styles['card__artists']} />
-      <button type="button" onClick={addQueue(props)} className={styles['queue']}>
+      {/* <button type="button" onClick={addQueue(props)} className={styles['queue']}>
         <MdQueue />
-      </button>
+      </button> */}
     </button>
   );
 };

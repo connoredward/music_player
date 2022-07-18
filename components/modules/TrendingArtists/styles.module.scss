@@ -1,0 +1,36 @@
+.trending {
+  margin: 0 0 20px 0;
+  h3 {
+    margin: 0;
+    font-weight: 500;
+    font-size: 22px;
+  }
+  button {
+    all: unset;
+    display: flex;
+    align-items: flex-start;
+    margin: 10px 0;
+    cursor: pointer;
+    >span {
+      overflow: visible !important;
+
+    }
+    span {
+      font-weight: 700;
+      margin: 10px 0 0 10px;
+      font-size: 12px;
+      color: rgba(27,14,54,1);
+    }
+  }
+  
+  .trending__img {
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px 1px rgba(67,15,93, .3);
+  }
+  .trending__more {
+    margin: 20px 0 0 0;
+    opacity: .4;
+    font-weight: 600;
+    font-size: 11px;
+  }
+}

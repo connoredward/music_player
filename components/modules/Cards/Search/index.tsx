@@ -19,29 +19,33 @@ const Card: FC = () => {
       ({ album: { release_date: a } }, { album: { release_date: b } }) => new Date(b) - new Date(a)
     );
   return (
-    <>
-      <span>Searched:</span>
-      {tracks?.map(({ album, artists, id }) => (
-        <div
-          onClick={() => router.push(`/?album=${album?.id}`, null, { shallow: true })}
-          className={styles['card']}
-          key={id}
-        >
-          <div className={styles['content']}>
-            <span className={styles['content__album']}>{album.name}</span>
-            <span className={styles['content__artist']}>{artists[0].name}</span>
+    <div className={styles['searched']}>
+      <span>Albums</span>
+      <div>
+        {tracks?.map(({ album, artists, id }) => (
+          <div
+            onClick={() => router.push(`/?album=${album?.id}`, null, { shallow: true })}
+            className={styles['card']}
+            key={id}
+          >
+            <Image
+              alt={album?.name}
+              src={album?.images[1]?.url}
+              width={55}
+              height={55}
+              placeholder="blur"
+              blurDataURL={album?.images[0]?.url}
+              objectFit="cover"
+              className={styles['card__cover']}
+            />
+            <div className={styles['content']}>
+              <span className={styles['content__album']}>{album.name}</span>
+              <span className={styles['content__artist']}>{artists[0].name}</span>
+            </div>
           </div>
-          <Image
-            alt={album?.name}
-            src={album?.images[2]?.url}
-            width={70}
-            height={70}
-            placeholder="blur"
-            blurDataURL={album?.images[2]?.url}
-          />
-        </div>
-      ))}
-    </>
+        ))}
+      </div>
+    </div>
   );
 };
 

@@ -47,7 +47,7 @@ export const Store = ({ children }): any => {
 
       setCurrentSong({
         ...prevSong,
-        img: currentAlbum?.images?.[2]?.url ?? prevSong?.img,
+        img: currentAlbum?.images?.[0]?.url ?? prevSong?.img,
         albumId: currentAlbum?.id ?? prevSong?.albumId,
         videoId: await getId(
           `${currentAlbum?.artists?.[0]?.name ?? prevSong?.artists?.[0]?.name} - ${
@@ -73,7 +73,7 @@ export const Store = ({ children }): any => {
 
       setCurrentSong({
         ...nextSong,
-        img: currentAlbum?.images?.[2]?.url ?? nextSong?.img,
+        img: currentAlbum?.images?.[0]?.url ?? nextSong?.img,
         albumId: currentAlbum?.id ?? nextSong?.albumId,
         videoId: await getId(
           `${currentAlbum?.artists?.[0]?.name ?? nextSong?.artists?.[0]?.name} - ${

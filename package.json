@@ -17,6 +17,7 @@
   "dependencies": {
     "classnames": "^2.3.1",
     "cookie": "^0.5.0",
+    "deezer-public-api": "^1.0.4",
     "jsdom-deno": "^19.0.2",
     "mongoose": "^6.3.2",
     "next": "^12.1.6",

@@ -1,13 +1,13 @@
 import React, { useEffect, useRef } from 'react';
 import type { FC } from 'react';
 import { useRouter } from 'next/router';
-import Link from 'next/link';
+import { AiOutlineSearch } from 'react-icons/ai';
 
 import { useForm } from 'utils/useForm';
 
 import styles from './styles.module.scss';
 
-const Form: FC = () => {
+const NavBar: FC = () => {
   const router = useRouter();
   const timerRef = useRef(null);
 
@@ -40,31 +40,18 @@ const Form: FC = () => {
   }, [music?.search]);
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        onChange={handleChange('search')}
-        value={music?.search || ''}
-        type="text"
-        placeholder="search..."
-      />
-    </form>
+    <div className={styles['nav']}>
+      <form onSubmit={handleSubmit}>
+        <input
+          onChange={handleChange('search')}
+          value={music?.search || ''}
+          type="text"
+          // placeholder="search..."
+        />
+        <AiOutlineSearch />
+      </form>
+    </div>
   );
 };
-
-const NavBar: FC = () => (
-  <div className={styles['nav']}>
-    <Link href={{ pathname: '/', query: {} }} prefetch={false} passHref>
-      <a href="null">
-        <h1>
-          msuci_pl<span>.</span>
-        </h1>
-        <h1 className={styles['mobile']}>
-          M<span>.</span>
-        </h1>
-      </a>
-    </Link>
-    <Form />
-  </div>
-);
 
 export default NavBar;

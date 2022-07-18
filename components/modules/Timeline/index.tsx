@@ -36,6 +36,7 @@ const SongRange: FC = () => {
 
   return (
     <div className={styles['range']}>
+      <span className={styles['range__cur']}>{songTime(block || currentTime)}</span>
       <Range
         onChange={(value) => setBlock(value)}
         onFinalChange={changeCurrentTime}
@@ -68,13 +69,10 @@ const SongRange: FC = () => {
               backgroundColor: 'rgb(218, 242, 35)',
               borderRadius: '100px',
             }}
-          >
-            <div className={styles['times']}>
-              <span>{songTime(block || currentTime)}</span>/<span>{songTime(duration)}</span>
-            </div>
-          </div>
+          />
         )}
       />
+      <span className={styles['range__duration']}>{songTime(duration)}</span>
     </div>
   );
 };

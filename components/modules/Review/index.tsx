@@ -5,8 +5,6 @@ import classNames from 'classnames';
 
 import styles from './styles.module.scss';
 
-const fetcher = (url) => fetch(url).then((r) => r.json());
-
 type Props = {
   artists: {
     name: string;
