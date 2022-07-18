@@ -14,8 +14,8 @@ const Card: FC = () => {
     ?.filter(
       (value, index, self) => index === self.findIndex((t) => t.album.name === value.album.name)
     )
-    // @ts-ignore
     ?.sort(
+      // @ts-ignore
       ({ album: { release_date: a } }, { album: { release_date: b } }) => new Date(b) - new Date(a)
     );
   return (
