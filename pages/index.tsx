@@ -14,6 +14,7 @@ import styles from './styles.module.scss';
 const SearchPage = dynamic(() => import('components/pages/Search'));
 const AlbumPage = dynamic(() => import('components/pages/Album'));
 const QueuePage = dynamic(() => import('components/pages/Queue'));
+const ArtistPage = dynamic(() => import('components/pages/Artist'));
 
 const Page: NextPage = () => {
   // Get accessToken and store as cookie.
@@ -29,9 +30,8 @@ const Page: NextPage = () => {
         <div className={styles['content']}>
           <Nav />
           <HomePage />
-          {/* <SearchPage /> */}
           <AlbumPage />
-          <QueuePage />
+          <ArtistPage />
         </div>
 
         <Player />

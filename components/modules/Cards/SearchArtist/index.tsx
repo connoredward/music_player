@@ -8,7 +8,7 @@ import styles from './styles.module.scss';
 
 const SearchArtists: FC = () => {
   const router = useRouter();
-  const { data } = useSWR(`/api/spotify/artist/${router?.query?.search}`);
+  const { data } = useSWR(`/api/spotify/search/${router?.query?.search}`);
   if (!data) return null;
   const artists = data?.artists?.body?.artists?.items
     ?.sort(({ followers: { total: a } }, { followers: { total: b } }) => b - a)

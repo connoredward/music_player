@@ -21,7 +21,7 @@ const TrendingAlbums: FC = () => {
 
       <div className={styles['list']}>
         {data?.albums?.data?.map(({ id, artist, cover_medium, title }) => (
-          <button key={id} type="button" onClick={() => router.push(`/?search=${title}`)}>
+          <button key={id} type="button" onClick={() => router.push(`/?search=${artist.name}`)}>
             <Image
               alt={title}
               src={cover_medium}

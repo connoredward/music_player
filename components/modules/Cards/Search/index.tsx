@@ -8,7 +8,7 @@ import styles from './styles.module.scss';
 
 const Card: FC = () => {
   const router = useRouter();
-  const { data } = useSWR(`/api/spotify/artist/${router?.query?.search}`);
+  const { data } = useSWR(`/api/spotify/search/${router?.query?.search}`);
   if (!data?.albums) return null;
   const tracks = data?.albums?.body?.tracks?.items
     ?.filter(

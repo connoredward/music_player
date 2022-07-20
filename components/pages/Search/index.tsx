@@ -12,7 +12,7 @@ const SearchCard = dynamic(() => import('components/modules/Cards/Search'));
 const SearchPage: FC = () => {
   const { setIsLoading } = useContext(LoaderContext);
   const router = useRouter();
-  const { data } = useSWR(`/api/spotify/artist/${router?.query?.search}`);
+  const { data } = useSWR(`/api/spotify/search/${router?.query?.search}`);
 
   useEffect(() => {
     setIsLoading(!data);

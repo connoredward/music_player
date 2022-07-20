@@ -81,156 +81,21 @@
 
 
 
-
-
-
-
 @font-face {
-  font-family: 'Geomanist';
-  font-weight: 300;
-  src: url('/fonts/hinted-Geomanist/hinted-Geomanist-Light.eot');
-  /* IE9 Compat Modes */
-  src: url('/fonts/hinted-Geomanist/hinted-Geomanist-Light.eot?#iefix') format('embedded-opentype'),
-    /* IE6-IE8 */
-    url('/fonts/hinted-Geomanist/hinted-Geomanist-Light.woff2') format('woff2'),
-    /* Super Modern Browsers */
-    url('/fonts/hinted-Geomanist/hinted-Geomanist-Light.woff') format('woff'),
-    /* Pretty Modern Browsers */
-    url('/fonts/hinted-Geomanist/hinted-Geomanist-Light.ttf') format('truetype'),
-    /* Safari, Android, iOS */
-    url('/fonts/hinted-Geomanist/hinted-Geomanist-Light.svg') format('svg');
-  /* Legacy iOS */
-}
-
-@font-face {
-  font-family: 'Geomanist';
+  font-family: 'Montserrat';
   font-weight: 500;
-  src: url('/fonts/hinted-Geomanist/hinted-Geomanist-Medium.eot');
-  /* IE9 Compat Modes */
-  src: url('/fonts/hinted-Geomanist/hinted-Geomanist-Medium.eot?#iefix') format('embedded-opentype'),
-    /* IE6-IE8 */
-    url('/fonts/hinted-Geomanist/hinted-Geomanist-Medium.woff2') format('woff2'),
-    /* Super Modern Browsers */
-    url('/fonts/hinted-Geomanist/hinted-Geomanist-Medium.woff') format('woff'),
-    /* Pretty Modern Browsers */
-    url('/fonts/hinted-Geomanist/hinted-Geomanist-Medium.ttf') format('truetype'),
-    /* Safari, Android, iOS */
-    url('/fonts/hinted-Geomanist/hinted-Geomanist-Medium.svg') format('svg');
-  /* Legacy iOS */
+  src: url('/fonts/Montserrat/Montserrat-Regular.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'Geomanist';
-  font-weight: 900;
-  src: url('/fonts/hinted-Geomanist/hinted-Geomanist-Black.eot');
-  /* IE9 Compat Modes */
-  src: url('/fonts/hinted-Geomanist/hinted-Geomanist-Black.eot?#iefix') format('embedded-opentype'),
-    /* IE6-IE8 */
-    url('/fonts/hinted-Geomanist/hinted-Geomanist-Black.woff2') format('woff2'),
-    /* Super Modern Browsers */
-    url('/fonts/hinted-Geomanist/hinted-Geomanist-Black.woff') format('woff'),
-    /* Pretty Modern Browsers */
-    url('/fonts/hinted-Geomanist/hinted-Geomanist-Black.ttf') format('truetype'),
-    /* Safari, Android, iOS */
-    url('/fonts/hinted-Geomanist/hinted-Geomanist-Black.svg') format('svg');
-  /* Legacy iOS */
-}
-
-@font-face {
-  font-family: 'Geomanist';
-  font-weight: 700;
-  src: url('/fonts/hinted-Geomanist/hinted-Geomanist-Bold.eot');
-  /* IE9 Compat Modes */
-  src: url('/fonts/hinted-Geomanist/hinted-Geomanist-Bold.eot?#iefix') format('embedded-opentype'),
-    /* IE6-IE8 */
-    url('/fonts/hinted-Geomanist/hinted-Geomanist-Bold.woff2') format('woff2'),
-    /* Super Modern Browsers */
-    url('/fonts/hinted-Geomanist/hinted-Geomanist-Bold.woff') format('woff'),
-    /* Pretty Modern Browsers */
-    url('/fonts/hinted-Geomanist/hinted-Geomanist-Bold.ttf') format('truetype'),
-    /* Safari, Android, iOS */
-    url('/fonts/hinted-Geomanist/hinted-Geomanist-Bold.svg') format('svg');
-  /* Legacy iOS */
-}
-
-@font-face {
-  font-family: 'Geomanist';
+  font-family: 'Montserrat';
   font-weight: 400;
-  src: url('/fonts/hinted-Geomanist/hinted-Geomanist-Book.eot');
-  /* IE9 Compat Modes */
-  src: url('/fonts/hinted-Geomanist/hinted-Geomanist-Book.eot?#iefix') format('embedded-opentype'),
-    /* IE6-IE8 */
-    url('/fonts/hinted-Geomanist/hinted-Geomanist-Book.woff2') format('woff2'),
-    /* Super Modern Browsers */
-    url('/fonts/hinted-Geomanist/hinted-Geomanist-Book.woff') format('woff'),
-    /* Pretty Modern Browsers */
-    url('/fonts/hinted-Geomanist/hinted-Geomanist-Book.ttf') format('truetype'),
-    /* Safari, Android, iOS */
-    url('/fonts/hinted-Geomanist/hinted-Geomanist-Book.svg') format('svg');
-  /* Legacy iOS */
+  src: url('/fonts/Montserrat/Montserrat-Light.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'Geomanist';
-  font-weight: 350;
-  src: url('/fonts/hinted-Geomanist/hinted-Geomanist-ExtraLight.eot');
-  /* IE9 Compat Modes */
-  src: url('/fonts/hinted-Geomanist/hinted-Geomanist-ExtraLight.eot?#iefix') format('embedded-opentype'),
-    /* IE6-IE8 */
-    url('/fonts/hinted-Geomanist/hinted-Geomanist-ExtraLight.woff2') format('woff2'),
-    /* Super Modern Browsers */
-    url('/fonts/hinted-Geomanist/hinted-Geomanist-ExtraLight.woff') format('woff'),
-    /* Pretty Modern Browsers */
-    url('/fonts/hinted-Geomanist/hinted-Geomanist-ExtraLight.ttf') format('truetype'),
-    /* Safari, Android, iOS */
-    url('/fonts/hinted-Geomanist/hinted-Geomanist-ExtraLight.svg') format('svg');
-  /* Legacy iOS */
+  font-family: 'Montserrat';
+  font-weight: 600;
+  src: url('/fonts/Montserrat/Montserrat-Bold.ttf') format('truetype');
 }
 
-@font-face {
-  font-family: 'Geomanist';
-  src: url('/fonts/hinted-Geomanist/hinted-Geomanist-Regular.eot');
-  /* IE9 Compat Modes */
-  src: url('/fonts/hinted-Geomanist/hinted-Geomanist-Regular.eot?#iefix') format('embedded-opentype'),
-    /* IE6-IE8 */
-    url('/fonts/hinted-Geomanist/hinted-Geomanist-Regular.woff2') format('woff2'),
-    /* Super Modern Browsers */
-    url('/fonts/hinted-Geomanist/hinted-Geomanist-Regular.woff') format('woff'),
-    /* Pretty Modern Browsers */
-    url('/fonts/hinted-Geomanist/hinted-Geomanist-Regular.ttf') format('truetype'),
-    /* Safari, Android, iOS */
-    url('/fonts/hinted-Geomanist/hinted-Geomanist-Regular.svg') format('svg');
-  /* Legacy iOS */
-}
-
-@font-face {
-  font-family: 'Geomanist';
-  src: url('/fonts/hinted-Geomanist/hinted-Geomanist-Ultra.eot');
-  /* IE9 Compat Modes */
-  src: url('/fonts/hinted-Geomanist/hinted-Geomanist-Ultra.eot?#iefix') format('embedded-opentype'),
-    /* IE6-IE8 */
-    url('/fonts/hinted-Geomanist/hinted-Geomanist-Ultra.woff2') format('woff2'),
-    /* Super Modern Browsers */
-    url('/fonts/hinted-Geomanist/hinted-Geomanist-Ultra.woff') format('woff'),
-    /* Pretty Modern Browsers */
-    url('/fonts/hinted-Geomanist/hinted-Geomanist-Ultra.ttf') format('truetype'),
-    /* Safari, Android, iOS */
-    url('/fonts/hinted-Geomanist/hinted-Geomanist-Ultra.svg') format('svg');
-  /* Legacy iOS */
-}
-
-@font-face {
-  font-family: 'Geomanist';
-  src: url('/fonts/hinted-Geomanist/hinted-Geomanist-Thin.eot');
-  /* IE9 Compat Modes */
-  src: url('/fonts/hinted-Geomanist/hinted-Geomanist-Thin.eot?#iefix') format('embedded-opentype'),
-    /* IE6-IE8 */
-    url('/fonts/hinted-Geomanist/hinted-Geomanist-Thin.woff2') format('woff2'),
-    /* Super Modern Browsers */
-    url('/fonts/hinted-Geomanist/hinted-Geomanist-Thin.woff') format('woff'),
-    /* Pretty Modern Browsers */
-    url('/fonts/hinted-Geomanist/hinted-Geomanist-Thin.ttf') format('truetype'),
-    /* Safari, Android, iOS */
-    url('/fonts/hinted-Geomanist/hinted-Geomanist-Thin.svg') format('svg');
-  /* Legacy iOS */
-}
