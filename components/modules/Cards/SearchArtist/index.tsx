@@ -13,6 +13,9 @@ const SearchArtists: FC = () => {
   const artists = data?.artists?.body?.artists?.items
     ?.sort(({ followers: { total: a } }, { followers: { total: b } }) => b - a)
     ?.slice(0, 3);
+
+  console.log(artists);
+
   return (
     <>
       <span>Artists</span>
@@ -23,16 +26,21 @@ const SearchArtists: FC = () => {
             type="button"
             onClick={() => router.push(`/?artist=${id}`, null, { shallow: true })}
           >
-            <Image
-              alt={name}
-              src={images?.[1]?.url}
-              width={150}
-              height={120}
-              placeholder="blur"
-              blurDataURL={images?.[1]?.url}
-              objectFit="cover"
-              className={styles['artists__img']}
-            />
+            {images?.[0]?.url ? (
+              <Image
+                alt={name}
+                src={images?.[1]?.url}
+                width={150}
+                height={120}
+                placeholder="blur"
+                blurDataURL={images?.[1]?.url}
+                objectFit="cover"
+                className={styles['artists__img']}
+              />
+            ) : (
+              name
+            )}
+
             <span>{name}</span>
           </button>
         ))}
