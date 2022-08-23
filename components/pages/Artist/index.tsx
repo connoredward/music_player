@@ -11,7 +11,6 @@ import styles from './styles.module.scss';
 const ArtistPage: FC = () => {
   const router = useRouter();
   const { data } = useSWR(`/api/spotify/artist/${router?.query?.artist}`);
-  console.log(data);
   if (!data || !router?.query?.artist) return null;
   return (
     <div>

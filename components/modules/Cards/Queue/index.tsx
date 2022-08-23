@@ -36,8 +36,6 @@ const QueueCard: FC<Props> = (props) => {
   const { getId } = useContext(YoutubeContext);
 
   const searchSong = async () => {
-    console.log(album);
-
     setDisabled(true);
     setCurrentSong({ ...props, videoId: await getId(`${artists?.[0]?.name} - ${name} song`) });
     setCurrentAlbum({ tracks: { items: queue } });
